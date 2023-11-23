@@ -34,8 +34,10 @@ export class AuthService {
   }
 
   login(model: SignInRequest): Observable<SignInResponse> {
-    return this.http.post(`${environment.DOMAIN}/api/account/signin`, model, this.httpOptions)
+    return this.http.post(`${environment.DOMAIN}/login`, model, this.httpOptions)
       .pipe(map((response: SignInResponse) => {
+        console.log(response)
+
         this.tokenStorage.saveToken(response.accessToken)
         this.tokenStorage.saveUser(new UserProfile(response.id, response.email, response.name, response.imageUrl))
         console.log(response.accessToken)

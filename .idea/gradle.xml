@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/chat-server" />
             <option value="$PROJECT_DIR$/nginx-server" />
+            <option value="$PROJECT_DIR$/oauth2server" />
           </set>
         </option>
       </GradleProjectSettings>

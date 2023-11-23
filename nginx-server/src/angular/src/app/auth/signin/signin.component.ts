@@ -19,7 +19,7 @@ export class SigninComponent implements OnInit {
 
   constructor( private _authService: AuthService, private fb: FormBuilder, private router: Router) { 
     this.signInFrom = this.fb.group({
-      email: [],
+      username: [],
       password: []
     })
   }
@@ -31,7 +31,7 @@ export class SigninComponent implements OnInit {
     if(this.signInFrom.valid){
       let data = this.signInFrom.value
       this.loading = true
-      this._authService.login(new SignInRequest(data['email'], data['password'])).subscribe(
+      this._authService.login(new SignInRequest(data['username'], data['password'])).subscribe(
         (response: SignInResponse)=>{
           this.router.navigateByUrl(this.redirect)
           this.loading = false
