@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   login(model: SignInRequest): Observable<SignInResponse> {
-    return this.http.post(`${environment.DOMAIN}/login`, model, this.httpOptions)
+    return this.http.get(`${environment.DOMAIN}/oauth2/oauth2/login`, this.httpOptions)
       .pipe(map((response: SignInResponse) => {
         console.log(response)
 

@@ -4,7 +4,7 @@
     </nb-card-header>
     <nb-card-body>
         <form [formGroup]="signInFrom" (ngSubmit)="login()">
-            <div class="form-control-group mb-3">
+            <!-- <div class="form-control-group mb-3">
                 <label class="label" for="input-email">Email address:</label>
                 <input nbInput fullWidth id="input-email" type="email" placeholder="Email address" fieldSize="large" formControlName="username">
             </div>
@@ -17,7 +17,7 @@
                 <p class="text-right">
                     <a class="caption-2 text-primary" routerLink="../forgot">Forgot Password?</a>
                 </p>
-            </div>
+            </div> -->
 
             <button nbButton fullWidth outline status="primary" size="large" [disabled]="!signInFrom.valid">
                 Sign In

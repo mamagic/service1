@@ -54,7 +54,7 @@ public class DefaultSecurityConfig {
         http
                 .csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers("/", "/error", "/join/**", "/login/**").permitAll()
+                        authorize.requestMatchers("/", "/error", "/join/**", "/oauth2/login/**").permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/connect/logout")).permitAll()
                                 .anyRequest().permitAll())
 
